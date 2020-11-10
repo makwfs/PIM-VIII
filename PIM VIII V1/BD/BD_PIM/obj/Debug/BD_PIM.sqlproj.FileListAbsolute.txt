@@ -1,0 +1,12 @@
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\bin\Debug\BD_PIM.dacpac
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\bin\Debug\BD_PIM.dll
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\bin\Debug\BD_PIM.pdb
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\obj\Debug\BD_PIM.sqlprojAssemblyReference.cache
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\obj\Debug\BD_PIM.dll
+C:\Users\mak_w\source\repos\PIM VIII\BD\BD_PIM\obj\Debug\BD_PIM.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\bin\Debug\BD_PIM.dacpac
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\bin\Debug\BD_PIM.dll
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\bin\Debug\BD_PIM.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\obj\Debug\BD_PIM.sqlprojAssemblyReference.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\obj\Debug\BD_PIM.dll
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\BD\BD_PIM\obj\Debug\BD_PIM.pdb

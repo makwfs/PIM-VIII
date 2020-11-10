@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TsOYTzI7nDxfjKux0xgoC9DNSGU8uZsj5WIwn7e8dFJztSOInvAXQrFLlyQs0pMR3hP0V1YgEeUDVy5UBXyk8w==",
+  "dgSpecHash": "fM6lCnWvN2mLZJ+3K8W4t/cyKvc17ypviANawZWL94iY1qb5rMdgS7HRrNcJYoy2qyrPfzIQ/tKGToU8gZeuWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\Modelo.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mak_w\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

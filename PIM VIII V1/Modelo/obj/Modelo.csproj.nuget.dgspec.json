@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\Modelo.csproj": {}
+    "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\Modelo.csproj": {
+    "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\Modelo.csproj",
-        "packagesPath": "C:\\Users\\Telemática-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\Modelo\\obj\\",
+        "projectPath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj",
+        "packagesPath": "C:\\Users\\mak_w\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Telemática-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mak_w\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,12 +47,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

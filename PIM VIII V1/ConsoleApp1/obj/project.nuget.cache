@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TNCdA56MV+/o2EU8/AfFXdw8yOlwcM9bTR4dzin4W/AcNVC7zzDpkJ5K3zW+duQIob8fKGNSxIEmgFn8ye3vEA==",
+  "dgSpecHash": "vvq3fds8TqEFZsTR4WvmEBjCzXzpOaPRdQVBHfb3TdLpSACkD2wtHvjh1MCvYEU45yFiJpUbjfmltFnh6tSAPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Telemática-PC\\Desktop\\PIM VIII V1\\ConsoleApp1\\Controle.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\ConsoleApp1\\Controle.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mak_w\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

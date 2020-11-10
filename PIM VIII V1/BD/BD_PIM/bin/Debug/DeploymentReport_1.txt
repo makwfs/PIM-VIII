@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[PESSOA_TELEFONE] (Table)
+       [dbo].[TELEFONE] (Table)
+       [dbo].[TELEFONE_TIPO] (Table)
+       [dbo].[FK_PESSOA_TELEFONE_ToTable] (Foreign Key)
+       [dbo].[FK_TELEFONE_ToTable] (Foreign Key)
+
+** Supporting actions
