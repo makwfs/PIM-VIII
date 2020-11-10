@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj": {}
+    "F:\\PIM VIII V2\\Modelo\\Modelo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj": {
+    "F:\\PIM VIII V2\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "F:\\PIM VIII V2\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\Modelo.csproj",
+        "projectPath": "F:\\PIM VIII V2\\Modelo\\Modelo.csproj",
         "packagesPath": "C:\\Users\\mak_w\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mak_w\\OneDrive\\Documentos\\MeusProjetos\\GitHub\\PIM-VIII\\PIM VIII V1\\Modelo\\obj\\",
+        "outputPath": "F:\\PIM VIII V2\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mak_w\\AppData\\Roaming\\NuGet\\NuGet.Config",

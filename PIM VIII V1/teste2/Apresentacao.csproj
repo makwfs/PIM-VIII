@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{690ED575-9B29-4EC4-8BB8-ED571D9E6189}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Apresentacao</RootNamespace>
-    <AssemblyName>Apresentacao</AssemblyName>
+    <RootNamespace>Teste2</RootNamespace>
+    <AssemblyName>Teste2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,9 @@
     <Compile Include="Apresentacao\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Conexao1.cs" />
+    <Compile Include="DAL\CadastroDaoComandos.cs" />
+    <Compile Include="DAL\conexao.cs" />
+    <Compile Include="Modelo\controle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Apresentacao\Form1.resx">
@@ -82,7 +84,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modelo\" />
+    <None Include="Resources\background.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

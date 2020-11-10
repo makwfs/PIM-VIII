@@ -31,7 +31,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -54,10 +54,10 @@
             this.txtDDD = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtNumTel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.combTipo = new System.Windows.Forms.ComboBox();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,14 +88,15 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // btnInserir
+            // btnCadastrar
             // 
-            this.btnInserir.Location = new System.Drawing.Point(537, 43);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(75, 23);
-            this.btnInserir.TabIndex = 2;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Location = new System.Drawing.Point(537, 43);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnConsultar
             // 
@@ -305,12 +306,12 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Número:";
             // 
-            // txtNum
+            // txtNumTel
             // 
-            this.txtNum.Location = new System.Drawing.Point(245, 203);
-            this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(130, 20);
-            this.txtNum.TabIndex = 0;
+            this.txtNumTel.Location = new System.Drawing.Point(245, 203);
+            this.txtNumTel.Name = "txtNumTel";
+            this.txtNumTel.Size = new System.Drawing.Size(130, 20);
+            this.txtNumTel.TabIndex = 0;
             // 
             // label14
             // 
@@ -323,34 +324,29 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Tipo:";
             // 
-            // combTipo
+            // btnFechar
             // 
-            this.combTipo.FormattingEnabled = true;
-            this.combTipo.Items.AddRange(new object[] {
-            "Celular",
-            "Telefone Fixo"});
-            this.combTipo.Location = new System.Drawing.Point(434, 203);
-            this.combTipo.Name = "combTipo";
-            this.combTipo.Size = new System.Drawing.Size(93, 21);
-            this.combTipo.TabIndex = 5;
+            this.btnFechar.Location = new System.Drawing.Point(537, 456);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // btnSair
+            // txtTipo
             // 
-            this.btnSair.Location = new System.Drawing.Point(537, 463);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 2;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.txtTipo.Location = new System.Drawing.Point(437, 205);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(61, 20);
+            this.txtTipo.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(656, 498);
-            this.Controls.Add(this.combTipo);
+            this.ClientSize = new System.Drawing.Size(657, 491);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
@@ -366,13 +362,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtNum);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.txtNumTel);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtDDD);
             this.Controls.Add(this.txtBairro);
@@ -393,7 +390,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -416,10 +413,10 @@
         private System.Windows.Forms.TextBox txtDDD;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.TextBox txtNumTel;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox combTipo;
-        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.TextBox txtTipo;
     }
 }
 
