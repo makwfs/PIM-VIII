@@ -12,7 +12,7 @@ namespace Teste2.DAL
         SqlConnection con = new SqlConnection();
         public conexao() //construtor
         {
-            con.ConnectionString = @"Data Source=DESKTOP-9IFV0OT;Initial Catalog=BD_PIM;Integrated Security=True"; // endereço banco de dados
+            con.ConnectionString = @"Data Source=DESKTOP-9IFV0OT;Initial Catalog=BD_PIMVIII;Integrated Security=True"; // endereço banco de dados
         }
 
         public SqlConnection Conectar()

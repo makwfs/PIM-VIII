@@ -13,46 +13,36 @@ namespace Teste2.DAL
         public String mensagem = "";
         SqlCommand cmd = new SqlCommand();
         conexao con = new conexao();
+        SqlDataReader dr;
 
-        public String Cadastrar(String nome, String cpf, String logradouro, String num,
-            String bairro, String cidade, String estado, String ddd, String tel,String tipo)  // cadastro no BD
+        public String Cadastrar (String nome, String cpf)  // cadastro no BD
         {
             
-            cmd.CommandText = "insert into PESSOA values (@nome, @cpf);";
+            cmd.CommandText = "insert into pessoa values (@nome, @cpf);";
             cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@cpf", cpf);
-
-            cmd.CommandText = "insert into ENDERECO values (@logradouro, @num, @bairro, @cidade, @estado);";
-            cmd.Parameters.AddWithValue("@logradouro", logradouro);
-            cmd.Parameters.AddWithValue("@num", num);
-            cmd.Parameters.AddWithValue("@bairro", bairro);
-            cmd.Parameters.AddWithValue("@cidade", cidade);
-            cmd.Parameters.AddWithValue("@estado", estado);
-
-            cmd.CommandText = "insert into TELEFONE values (@ddd, @tel,@tipo);";
-            cmd.Parameters.AddWithValue("@ddd", ddd);
-            cmd.Parameters.AddWithValue("@tel", tel);
-            cmd.Parameters.AddWithValue("@tipo", tipo);
-
-            cmd.CommandText = "insert into TELEFONE_TIPO values(@tipo);";
-            cmd.Parameters.AddWithValue("@tipo", tipo);
+            cmd.Parameters.AddWithValue("@nome",cpf);
+            
 
 
             try
             {
                 cmd.Connection = con.Conectar();
-                cmd.ExecuteNonQuery();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    tem = true;
+                }
                 con.desconectar();
-                this.mensagem = "Cadastrado com sucesso!";
-                
+                dr.Close();
+
             }
             catch (SqlException)
             {
-                this.mensagem = "Erro com banco de dados";
 
+                this.mensagem = "Erro com Banco de Dados !";
             }
 
-            return mensagem;
+           return mensagem;
         }
     }
 }

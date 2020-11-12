@@ -31,8 +31,7 @@ namespace Teste2
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             controle controle = new controle();
-            String mensagem = controle.Cadastrar(txtNome.Text, txtCpf.Text, txtLogradouro.Text,
-               txtNumero.Text, txtCidade.Text, txtUf.Text, txtDDD.Text, txtNumTel.Text, txtTipo.Text);
+            String mensagem = controle.Cadastrar(txbNome.Text, txbCpf.Text);
             if (controle.tem)
             {
                 MessageBox.Show(mensagem, "Cadastro Realizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -44,7 +43,10 @@ namespace Teste2
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }   
 
