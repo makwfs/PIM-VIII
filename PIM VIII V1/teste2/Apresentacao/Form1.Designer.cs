@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -59,10 +60,16 @@
             this.Pessoa = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bD_PIMDataSet = new Teste2.BD_PIMDataSet();
+            this.bDPIMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbCep = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Pessoa.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txbNome
@@ -122,10 +129,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 334);
+            this.dataGridView1.DataSource = this.bDPIMDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 352);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(600, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 162);
             this.dataGridView1.TabIndex = 3;
             // 
             // txbCpf
@@ -361,15 +370,45 @@
             this.groupBox3.Controls.Add(this.txbDDD);
             this.groupBox3.Controls.Add(this.txbNumTel);
             this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.txbCep);
             this.groupBox3.Controls.Add(this.txbTipo);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Location = new System.Drawing.Point(12, 215);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(502, 100);
+            this.groupBox3.Size = new System.Drawing.Size(502, 112);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contato";
+            // 
+            // bD_PIMDataSet
+            // 
+            this.bD_PIMDataSet.DataSetName = "BD_PIMDataSet";
+            this.bD_PIMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bDPIMDataSetBindingSource
+            // 
+            this.bDPIMDataSetBindingSource.DataSource = this.bD_PIMDataSet;
+            this.bDPIMDataSetBindingSource.Position = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 75);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Cep:";
+            // 
+            // txbCep
+            // 
+            this.txbCep.Location = new System.Drawing.Point(52, 74);
+            this.txbCep.Name = "txbCep";
+            this.txbCep.Size = new System.Drawing.Size(97, 20);
+            this.txbCep.TabIndex = 0;
             // 
             // Form1
             // 
@@ -397,6 +436,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +476,10 @@
         private System.Windows.Forms.GroupBox Pessoa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.BindingSource bDPIMDataSetBindingSource;
+        private BD_PIMDataSet bD_PIMDataSet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbCep;
     }
 }
 

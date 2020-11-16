@@ -33,38 +33,54 @@ namespace Teste2
         {
             string mensagem = "";
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=DESKTOP-9IFV0OT;Initial Catalog=BD_PIMVIII;Integrated Security=True"; // endereço banco de dados
-            //definição do comando sql
-            string sql = "insert into pessoa (nome,cpf)  VALUES (@nome, @cpf)";
-            
-    try
+            conn.ConnectionString = @"Data Source=DESKTOP-9IFV0OT;Initial Catalog=BD_PIM;Integrated Security=True"; // endereço banco de dados
+            //comando de inserção dos dados no BD
+            string sql = "insert into pessoa (nome,cpf,logradouro)  VALUES (@nome, @cpf, @logradouro)";
+            string sql2 = "insert into endereco (logradouro,numero,cep,bairro,cidade,estado)  VALUES (@logradouro,@numero,@cep,@bairro,@cidade,@estado)";
+
+            try
             {
-                //Cria uma objeto do tipo comando passando como
-                
+                //Cria uma objeto do tipo comando 
                 SqlCommand comando = new SqlCommand(sql, conn);
                 //Adicionando o valor das textBox nos parametros do comando
                 comando.Parameters.Add(new SqlParameter("@nome", this.txbNome.Text));
                 comando.Parameters.Add(new SqlParameter("@cpf", this.txbCpf.Text));
-               
+                comando.Parameters.Add(new SqlParameter("logradouro", this.txbLogradouro.Text));
+
+                //Insere dados na tabela Endereço 
+                
+                SqlCommand inserirTabelaEndereco = new SqlCommand(sql2, conn);
+                //Adicionando o valor das textBox nos parametros do inserirTabelaEndereco
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@logradouro", this.txbLogradouro.Text));
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@numero", this.txbNumero.Text));
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@cep", this.txbCep.Text)); // FAZER TXB CEP NO FORM!!!
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@bairro", this.txbBairro.Text));
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@cidade", this.txbCidade.Text));
+                inserirTabelaEndereco.Parameters.Add(new SqlParameter("@estado", this.txbUf.Text));
+
                 //abre a conexao
                 conn.Open();
+               
                 //executa o comando com os parametros que foram adicionados acima
                 comando.ExecuteNonQuery();
+                
                 //fecha a conexao
                 conn.Close();
+                
                 //Minha função para limpar os textBox
                 LimpaCamos();
-                //Abaixo temos a ultlização de javascript para apresentar ao usuário um alert
-                // referente ao msgbox
-                //RegisterClientScriptBlock("cadastrado", "<script> alert(Operação concluida!)</ script > ");
+                
+                // Caso esteja tudo certo exibe a mensagem de cadastrado 
                 MessageBox.Show (mensagem,"Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(mensagem, "Nao funfa!", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                // Caso ocorra algum erro com o BD informa erro
+                MessageBox.Show(mensagem, "Erro com Banco de Dados !", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
             }
             finally
             {
+                // Fecha a conexão com o BD
                 conn.Close();
             }
         }
