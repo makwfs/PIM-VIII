@@ -36,6 +36,8 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bDPIMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bD_PIMDataSet = new Teste2.BD_PIMDataSet();
             this.txbCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,20 +58,39 @@
             this.txbNumTel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.txbTipo = new System.Windows.Forms.TextBox();
             this.Pessoa = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.bD_PIMDataSet = new Teste2.BD_PIMDataSet();
-            this.bDPIMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.txbCep = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.comboBoxTipo = new System.Windows.Forms.ComboBox();
+            this.pESSOABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pESSOATableAdapter = new Teste2.BD_PIMDataSetTableAdapters.PESSOATableAdapter();
+            this.pESSOATELEFONEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pESSOA_TELEFONETableAdapter = new Teste2.BD_PIMDataSetTableAdapters.PESSOA_TELEFONETableAdapter();
+            this.tELEFONETIPOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tELEFONE_TIPOTableAdapter = new Teste2.BD_PIMDataSetTableAdapters.TELEFONE_TIPOTableAdapter();
+            this.eNDERECOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNDERECOTableAdapter = new Teste2.BD_PIMDataSetTableAdapters.ENDERECOTableAdapter();
+            this.pESSOATELEFONEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pESSOABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNDERECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).BeginInit();
             this.Pessoa.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOATELEFONEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tELEFONETIPOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNDERECOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOATELEFONEBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txbNome
@@ -77,7 +98,7 @@
             this.txbNome.Location = new System.Drawing.Point(62, 29);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(194, 20);
-            this.txbNome.TabIndex = 0;
+            this.txbNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -104,7 +125,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(537, 43);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.TabIndex = 12;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -117,13 +138,14 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.Location = new System.Drawing.Point(537, 101);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 2;
+            this.btnAlterar.TabIndex = 0;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
@@ -131,18 +153,33 @@
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.bDPIMDataSetBindingSource;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nOMEDataGridViewTextBoxColumn,
+            this.cPFDataGridViewTextBoxColumn,
+            this.eNDERECODataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pESSOABindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 352);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(600, 162);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // bDPIMDataSetBindingSource
+            // 
+            this.bDPIMDataSetBindingSource.DataSource = this.bD_PIMDataSet;
+            this.bDPIMDataSetBindingSource.Position = 0;
+            // 
+            // bD_PIMDataSet
+            // 
+            this.bD_PIMDataSet.DataSetName = "BD_PIMDataSet";
+            this.bD_PIMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txbCpf
             // 
             this.txbCpf.Location = new System.Drawing.Point(316, 29);
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(170, 20);
-            this.txbCpf.TabIndex = 0;
+            this.txbCpf.TabIndex = 2;
             // 
             // label2
             // 
@@ -183,7 +220,7 @@
             this.txbLogradouro.Location = new System.Drawing.Point(94, 31);
             this.txbLogradouro.Name = "txbLogradouro";
             this.txbLogradouro.Size = new System.Drawing.Size(315, 20);
-            this.txbLogradouro.TabIndex = 0;
+            this.txbLogradouro.TabIndex = 3;
             // 
             // label6
             // 
@@ -201,7 +238,7 @@
             this.txbNumero.Location = new System.Drawing.Point(444, 32);
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(41, 20);
-            this.txbNumero.TabIndex = 0;
+            this.txbNumero.TabIndex = 4;
             // 
             // label7
             // 
@@ -219,7 +256,7 @@
             this.txbBairro.Location = new System.Drawing.Point(60, 57);
             this.txbBairro.Name = "txbBairro";
             this.txbBairro.Size = new System.Drawing.Size(142, 20);
-            this.txbBairro.TabIndex = 0;
+            this.txbBairro.TabIndex = 5;
             // 
             // label8
             // 
@@ -237,7 +274,7 @@
             this.txbCidade.Location = new System.Drawing.Point(279, 58);
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(130, 20);
-            this.txbCidade.TabIndex = 0;
+            this.txbCidade.TabIndex = 6;
             // 
             // label9
             // 
@@ -255,7 +292,7 @@
             this.txbUf.Location = new System.Drawing.Point(444, 58);
             this.txbUf.Name = "txbUf";
             this.txbUf.Size = new System.Drawing.Size(41, 20);
-            this.txbUf.TabIndex = 0;
+            this.txbUf.TabIndex = 7;
             // 
             // label11
             // 
@@ -273,7 +310,7 @@
             this.txbDDD.Location = new System.Drawing.Point(116, 33);
             this.txbDDD.Name = "txbDDD";
             this.txbDDD.Size = new System.Drawing.Size(33, 20);
-            this.txbDDD.TabIndex = 0;
+            this.txbDDD.TabIndex = 9;
             // 
             // label12
             // 
@@ -302,14 +339,14 @@
             this.txbNumTel.Location = new System.Drawing.Point(235, 34);
             this.txbNumTel.Name = "txbNumTel";
             this.txbNumTel.Size = new System.Drawing.Size(130, 20);
-            this.txbNumTel.TabIndex = 0;
+            this.txbNumTel.TabIndex = 10;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(382, 37);
+            this.label14.Location = new System.Drawing.Point(371, 37);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 16);
             this.label14.TabIndex = 4;
@@ -317,20 +354,13 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(537, 215);
+            this.btnFechar.Location = new System.Drawing.Point(537, 314);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 2;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // txbTipo
-            // 
-            this.txbTipo.Location = new System.Drawing.Point(427, 36);
-            this.txbTipo.Name = "txbTipo";
-            this.txbTipo.Size = new System.Drawing.Size(61, 20);
-            this.txbTipo.TabIndex = 0;
             // 
             // Pessoa
             // 
@@ -351,93 +381,183 @@
             this.groupBox2.Controls.Add(this.txbNumero);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txbUf);
+            this.groupBox2.Controls.Add(this.txbCep);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txbBairro);
             this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txbCidade);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(12, 106);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(502, 103);
+            this.groupBox2.Size = new System.Drawing.Size(502, 132);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboBoxTipo);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txbDDD);
             this.groupBox3.Controls.Add(this.txbNumTel);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txbCep);
-            this.groupBox3.Controls.Add(this.txbTipo);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(12, 215);
+            this.groupBox3.Location = new System.Drawing.Point(12, 250);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(502, 112);
+            this.groupBox3.Size = new System.Drawing.Size(502, 87);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contato";
             // 
-            // bD_PIMDataSet
+            // txbCep
             // 
-            this.bD_PIMDataSet.DataSetName = "BD_PIMDataSet";
-            this.bD_PIMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bDPIMDataSetBindingSource
-            // 
-            this.bDPIMDataSetBindingSource.DataSource = this.bD_PIMDataSet;
-            this.bDPIMDataSetBindingSource.Position = 0;
+            this.txbCep.Location = new System.Drawing.Point(60, 91);
+            this.txbCep.Name = "txbCep";
+            this.txbCep.Size = new System.Drawing.Size(142, 20);
+            this.txbCep.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 75);
+            this.label4.Location = new System.Drawing.Point(8, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Cep:";
             // 
-            // txbCep
+            // btnLimpar
             // 
-            this.txbCep.Location = new System.Drawing.Point(52, 74);
-            this.txbCep.Name = "txbCep";
-            this.txbCep.Size = new System.Drawing.Size(97, 20);
-            this.txbCep.TabIndex = 0;
+            this.btnLimpar.Location = new System.Drawing.Point(537, 287);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // comboBoxTipo
+            // 
+            this.comboBoxTipo.FormattingEnabled = true;
+            this.comboBoxTipo.Items.AddRange(new object[] {
+            "Celular",
+            "Telefone Fixo"});
+            this.comboBoxTipo.Location = new System.Drawing.Point(408, 32);
+            this.comboBoxTipo.Name = "comboBoxTipo";
+            this.comboBoxTipo.Size = new System.Drawing.Size(78, 21);
+            this.comboBoxTipo.TabIndex = 11;
+            // 
+            // pESSOABindingSource
+            // 
+            this.pESSOABindingSource.DataMember = "PESSOA";
+            this.pESSOABindingSource.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // pESSOATableAdapter
+            // 
+            this.pESSOATableAdapter.ClearBeforeFill = true;
+            // 
+            // pESSOATELEFONEBindingSource
+            // 
+            this.pESSOATELEFONEBindingSource.DataMember = "PESSOA_TELEFONE";
+            this.pESSOATELEFONEBindingSource.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // pESSOA_TELEFONETableAdapter
+            // 
+            this.pESSOA_TELEFONETableAdapter.ClearBeforeFill = true;
+            // 
+            // tELEFONETIPOBindingSource
+            // 
+            this.tELEFONETIPOBindingSource.DataMember = "TELEFONE_TIPO";
+            this.tELEFONETIPOBindingSource.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // tELEFONE_TIPOTableAdapter
+            // 
+            this.tELEFONE_TIPOTableAdapter.ClearBeforeFill = true;
+            // 
+            // eNDERECOBindingSource
+            // 
+            this.eNDERECOBindingSource.DataMember = "ENDERECO";
+            this.eNDERECOBindingSource.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // eNDERECOTableAdapter
+            // 
+            this.eNDERECOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pESSOATELEFONEBindingSource1
+            // 
+            this.pESSOATELEFONEBindingSource1.DataMember = "PESSOA_TELEFONE";
+            this.pESSOATELEFONEBindingSource1.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // pESSOABindingSource1
+            // 
+            this.pESSOABindingSource1.DataMember = "PESSOA";
+            this.pESSOABindingSource1.DataSource = this.bDPIMDataSetBindingSource;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nOMEDataGridViewTextBoxColumn
+            // 
+            this.nOMEDataGridViewTextBoxColumn.DataPropertyName = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.HeaderText = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.Name = "nOMEDataGridViewTextBoxColumn";
+            // 
+            // cPFDataGridViewTextBoxColumn
+            // 
+            this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
+            this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
+            // 
+            // eNDERECODataGridViewTextBoxColumn
+            // 
+            this.eNDERECODataGridViewTextBoxColumn.DataPropertyName = "ENDERECO";
+            this.eNDERECODataGridViewTextBoxColumn.HeaderText = "ENDERECO";
+            this.eNDERECODataGridViewTextBoxColumn.Name = "eNDERECODataGridViewTextBoxColumn";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(644, 526);
+            this.ClientSize = new System.Drawing.Size(640, 542);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Pessoa);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastro";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).EndInit();
             this.Pessoa.ResumeLayout(false);
             this.Pessoa.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bD_PIMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDPIMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOATELEFONEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tELEFONETIPOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNDERECOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOATELEFONEBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESSOABindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,7 +592,6 @@
         private System.Windows.Forms.TextBox txbNumTel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.TextBox txbTipo;
         private System.Windows.Forms.GroupBox Pessoa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -480,6 +599,22 @@
         private BD_PIMDataSet bD_PIMDataSet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbCep;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.ComboBox comboBoxTipo;
+        private System.Windows.Forms.BindingSource pESSOABindingSource;
+        private BD_PIMDataSetTableAdapters.PESSOATableAdapter pESSOATableAdapter;
+        private System.Windows.Forms.BindingSource pESSOATELEFONEBindingSource;
+        private BD_PIMDataSetTableAdapters.PESSOA_TELEFONETableAdapter pESSOA_TELEFONETableAdapter;
+        private System.Windows.Forms.BindingSource tELEFONETIPOBindingSource;
+        private BD_PIMDataSetTableAdapters.TELEFONE_TIPOTableAdapter tELEFONE_TIPOTableAdapter;
+        private System.Windows.Forms.BindingSource eNDERECOBindingSource;
+        private BD_PIMDataSetTableAdapters.ENDERECOTableAdapter eNDERECOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eNDERECODataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource pESSOABindingSource1;
+        private System.Windows.Forms.BindingSource pESSOATELEFONEBindingSource1;
     }
 }
 

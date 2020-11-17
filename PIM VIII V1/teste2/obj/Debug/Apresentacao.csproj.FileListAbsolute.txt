@@ -28,3 +28,4 @@ C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\Test
 C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\Teste2\bin\Debug\Teste2.exe.config
 C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\Teste2\bin\Debug\Teste2.exe
 C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\Teste2\bin\Debug\Teste2.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\Teste2\obj\Debug\Teste2.Apresentacao.Pesquisar.resources
