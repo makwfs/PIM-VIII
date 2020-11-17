@@ -33,7 +33,7 @@ namespace Teste2
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
             string mensagem = "";
-            int VarInt = 0;
+            
             
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = @"Data Source=DESKTOP-9IFV0OT;Initial Catalog=BD_PIM;Integrated Security=True"; // endereço banco de dados
