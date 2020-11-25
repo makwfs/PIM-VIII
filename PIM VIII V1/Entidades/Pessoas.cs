@@ -11,6 +11,7 @@ namespace SistemaMysql.Entidades
         int id;
         string nome, cpf, endereco;
 
+        // Encapsulamento 
         public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Cpf { get => cpf; set => cpf = value; }

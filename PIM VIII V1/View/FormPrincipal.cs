@@ -16,6 +16,8 @@ namespace SistemaMysql
 {
     public partial class FormPrincipal : Form
     {
+        PessoaModel model = new PessoaModel();
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -29,8 +31,8 @@ namespace SistemaMysql
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Pessoas dados = new Pessoas();
-            Cadastrar(dados);
+            Pessoas dado = new Pessoas();
+            Cadastrar(dado);
 
         }
 
@@ -40,7 +42,7 @@ namespace SistemaMysql
         }
         public void Cadastrar(Pessoas dados)     // capturando dados dos textbox
         {
-            PessoaModel pessoaModel = new PessoaModel();
+            
 
             try
             {
@@ -48,8 +50,8 @@ namespace SistemaMysql
                 dados.Cpf = txbCpf.Text;
                 dados.Endereco = txbEndereco.Text;
 
-                pessoaModel.Cadastrar(dados);
-                MessageBox.Show("Cliente Salvo com Sucesso!");
+                model.Cadastrar(dados);
+                MessageBox.Show("Salvo com Sucesso!");
             }
             catch (Exception ex)
             {

@@ -13,3 +13,16 @@ C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.csp
 C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.exe
 C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\obj\Debug\SistemaMysql.pdb
 C:\Users\mak_w\source\repos\SistemaMysql\SistemaMysql\bin\Debug\WindowsBase.dll
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe.config
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.xml
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.exe
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.pdb

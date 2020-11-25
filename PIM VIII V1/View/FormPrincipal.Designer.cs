@@ -68,7 +68,7 @@
             this.btnPesquisarPrincipal.Location = new System.Drawing.Point(563, 64);
             this.btnPesquisarPrincipal.Name = "btnPesquisarPrincipal";
             this.btnPesquisarPrincipal.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisarPrincipal.TabIndex = 0;
+            this.btnPesquisarPrincipal.TabIndex = 13;
             this.btnPesquisarPrincipal.Text = "Consultar";
             this.btnPesquisarPrincipal.UseVisualStyleBackColor = true;
             this.btnPesquisarPrincipal.Click += new System.EventHandler(this.btnPesquisarPrincipal_Click);
@@ -92,7 +92,7 @@
             this.txbCpf.Location = new System.Drawing.Point(332, 28);
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(187, 22);
-            this.txbCpf.TabIndex = 1;
+            this.txbCpf.TabIndex = 2;
             // 
             // txbNome
             // 
@@ -208,42 +208,42 @@
             this.textBox4.Location = new System.Drawing.Point(470, 37);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(60, 22);
-            this.textBox4.TabIndex = 1;
+            this.textBox4.TabIndex = 4;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(49, 97);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(154, 22);
-            this.textBox8.TabIndex = 1;
+            this.textBox8.TabIndex = 8;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(470, 67);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(60, 22);
-            this.textBox7.TabIndex = 1;
+            this.textBox7.TabIndex = 7;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(265, 67);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(174, 22);
-            this.textBox6.TabIndex = 1;
+            this.textBox6.TabIndex = 6;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(56, 67);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(147, 22);
-            this.textBox5.TabIndex = 1;
+            this.textBox5.TabIndex = 5;
             // 
             // txbEndereco
             // 
             this.txbEndereco.Location = new System.Drawing.Point(82, 37);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(357, 22);
-            this.txbEndereco.TabIndex = 1;
+            this.txbEndereco.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -272,7 +272,7 @@
             this.comboBox1.Location = new System.Drawing.Point(458, 49);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(72, 24);
-            this.comboBox1.TabIndex = 2;
+            this.comboBox1.TabIndex = 11;
             // 
             // label12
             // 
@@ -328,21 +328,21 @@
             this.textBox10.Location = new System.Drawing.Point(235, 49);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(148, 22);
-            this.textBox10.TabIndex = 1;
+            this.textBox10.TabIndex = 10;
             // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(117, 49);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(52, 22);
-            this.textBox9.TabIndex = 1;
+            this.textBox9.TabIndex = 9;
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Location = new System.Drawing.Point(563, 35);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.TabIndex = 12;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -352,7 +352,7 @@
             this.btnFechar.Location = new System.Drawing.Point(563, 347);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
-            this.btnFechar.TabIndex = 3;
+            this.btnFechar.TabIndex = 14;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);

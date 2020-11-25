@@ -46,7 +46,7 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("insert into pessoa (Nome, Cpf, Endereco) values(@Nome, @Cpf, @Endereco)");
+                sql = new MySqlCommand("INSERT INTO pessoa (nome, cpf, endereco) values (@Nome, @Cpf, @Endereco)", con.con);
                 sql.Parameters.AddWithValue("@Nome", dados.Nome);
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
@@ -58,6 +58,7 @@ namespace SistemaMysql.DAO
             {
 
                 MessageBox.Show("Erro ao salvar" + ex);
+                con.FecharConexao();
             }
         }
        
