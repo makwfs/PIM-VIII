@@ -40,7 +40,7 @@ namespace SistemaMysql
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
         public void Cadastrar(Pessoas dados)     // capturando dados dos textbox
         {
@@ -71,8 +71,6 @@ namespace SistemaMysql
         {
             
         }
-
-       
     }
 
 

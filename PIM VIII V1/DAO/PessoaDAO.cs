@@ -27,7 +27,7 @@ namespace SistemaMysql.DAO
             try                                                      // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from pessoa", con.con);
+                sql = new MySqlCommand("select * from pessoa", con.con);                                                    // comando para buscar dados no BD
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();
@@ -46,7 +46,7 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO pessoa (nome, cpf, endereco) values (@Nome, @Cpf, @Endereco)", con.con);
+                sql = new MySqlCommand("INSERT INTO pessoa (nome, cpf, endereco) values (@Nome, @Cpf, @Endereco)", con.con);  // comando para inserir dados no BD
                 sql.Parameters.AddWithValue("@Nome", dados.Nome);
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
@@ -58,6 +58,28 @@ namespace SistemaMysql.DAO
             {
 
                 MessageBox.Show("Erro ao salvar" + ex);
+                con.FecharConexao();
+            }
+        }
+
+        public void EditarDados(Pessoas dados)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("UPDATE pessoa SET nome = @Nome, Cpf = @Cpf, endereco = @Endereco WHERE id =@Id", con.con); // comando para editar dados no BD
+                sql.Parameters.AddWithValue("@Nome", dados.Nome);
+                sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
+                sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
+                sql.Parameters.AddWithValue("@Id", dados.Id);
+
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao editar" + ex);
                 con.FecharConexao();
             }
         }

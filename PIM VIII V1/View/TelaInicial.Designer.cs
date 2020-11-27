@@ -31,6 +31,7 @@
             this.btnCadastrarInicial = new System.Windows.Forms.Button();
             this.btnPesquisarInicial = new System.Windows.Forms.Button();
             this.btnEditarInicial = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrarInicial
@@ -63,11 +64,22 @@
             this.btnEditarInicial.UseVisualStyleBackColor = true;
             this.btnEditarInicial.Click += new System.EventHandler(this.btnEditarInicial_Click);
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Location = new System.Drawing.Point(289, 41);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(75, 23);
+            this.btnFechar.TabIndex = 3;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 98);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnEditarInicial);
             this.Controls.Add(this.btnPesquisarInicial);
             this.Controls.Add(this.btnCadastrarInicial);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Button btnCadastrarInicial;
         private System.Windows.Forms.Button btnPesquisarInicial;
         private System.Windows.Forms.Button btnEditarInicial;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

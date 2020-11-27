@@ -47,5 +47,19 @@ namespace SistemaMysql.Model
             }
         }
 
+
+        public void EditarDados(Pessoas dados)
+        {
+            try
+            {
+                dao.EditarDados(dados);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Editar" + ex);
+            }
+        }
     }
 }

@@ -60,6 +60,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.gridEditar = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.txbId = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,7 +70,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(642, 328);
+            this.btnLimpar.Location = new System.Drawing.Point(642, 309);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 24;
@@ -77,7 +79,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(642, 355);
+            this.btnFechar.Location = new System.Drawing.Point(642, 336);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 23;
@@ -96,7 +98,7 @@
             this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(91, 278);
+            this.groupBox3.Location = new System.Drawing.Point(91, 291);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(545, 100);
             this.groupBox3.TabIndex = 18;
@@ -195,7 +197,7 @@
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.txbEndereco);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(91, 135);
+            this.groupBox2.Location = new System.Drawing.Point(91, 148);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(545, 128);
             this.groupBox2.TabIndex = 19;
@@ -312,6 +314,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txbId);
+            this.groupBox1.Controls.Add(this.Id);
             this.groupBox1.Controls.Add(this.txbCpf);
             this.groupBox1.Controls.Add(this.txbNome);
             this.groupBox1.Controls.Add(this.label2);
@@ -319,7 +323,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(91, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(545, 77);
+            this.groupBox1.Size = new System.Drawing.Size(545, 104);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pessoa";
@@ -327,7 +331,7 @@
             // txbCpf
             // 
             this.txbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCpf.Location = new System.Drawing.Point(332, 28);
+            this.txbCpf.Location = new System.Drawing.Point(331, 59);
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(187, 22);
             this.txbCpf.TabIndex = 2;
@@ -335,7 +339,7 @@
             // txbNome
             // 
             this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNome.Location = new System.Drawing.Point(50, 28);
+            this.txbNome.Location = new System.Drawing.Point(49, 59);
             this.txbNome.Name = "txbNome";
             this.txbNome.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txbNome.Size = new System.Drawing.Size(221, 22);
@@ -345,7 +349,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(300, 31);
+            this.label2.Location = new System.Drawing.Point(299, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 0;
@@ -355,7 +359,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Location = new System.Drawing.Point(5, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -374,10 +378,10 @@
             // gridEditar
             // 
             this.gridEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEditar.Location = new System.Drawing.Point(91, 384);
+            this.gridEditar.Location = new System.Drawing.Point(91, 397);
             this.gridEditar.Name = "gridEditar";
             this.gridEditar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridEditar.Size = new System.Drawing.Size(545, 216);
+            this.gridEditar.Size = new System.Drawing.Size(545, 203);
             this.gridEditar.TabIndex = 27;
             this.gridEditar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEditar_CellClick);
             // 
@@ -389,6 +393,25 @@
             this.btnSalvar.TabIndex = 28;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txbId
+            // 
+            this.txbId.Enabled = false;
+            this.txbId.Location = new System.Drawing.Point(49, 31);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(45, 22);
+            this.txbId.TabIndex = 6;
+            // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.Location = new System.Drawing.Point(6, 36);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(24, 13);
+            this.Id.TabIndex = 5;
+            this.Id.Text = "ID:";
             // 
             // Editar
             // 
@@ -452,5 +475,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView gridEditar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txbId;
+        private System.Windows.Forms.Label Id;
     }
 }
