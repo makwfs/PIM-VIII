@@ -24,7 +24,7 @@ namespace SistemaMysql.DAO
         
         public DataTable Listar()
         {
-            try                                                      // Usar o try para caso ocorra algum erro
+            try                                                                                                               // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
                 sql = new MySqlCommand("select * from pessoa", con.con);                                                    // comando para buscar dados no BD
@@ -51,6 +51,13 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
 
+                sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, uf, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @Uf, @Cep)", con.con);
+                sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);
+                sql.Parameters.AddWithValue("@Numero", dados.Numero);
+                sql.Parameters.AddWithValue("@Bairro", dados.Bairro);
+                sql.Parameters.AddWithValue("@Cidade", dados.Cidade);
+                sql.Parameters.AddWithValue("@Uf", dados.Uf);
+                sql.Parameters.AddWithValue("@Cep", dados.Cep);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();
             }

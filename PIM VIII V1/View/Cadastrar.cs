@@ -50,7 +50,13 @@ namespace SistemaMysql
             {
                 dados.Nome = txbNome.Text;
                 dados.Cpf = txbCpf.Text;
-                dados.Endereco = txbEndereco.Text;
+                dados.Endereco = txbLogradouro.Text;
+                dados.Logradouro = txbLogradouro.Text;
+                dados.Numero = txbNumeroEndereco.Text;
+                dados.Bairro = txbBairro.Text;
+                dados.Cidade = txbCidade.Text;
+                dados.Uf = txbUf.Text;
+                dados.Cep = txbCep.Text;
 
                 model.Cadastrar(dados);
                 MessageBox.Show("Salvo com Sucesso!");

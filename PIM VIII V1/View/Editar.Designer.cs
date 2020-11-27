@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar));
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -53,6 +54,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.txbEndereco = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbId = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.Label();
             this.txbCpf = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,8 +63,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.gridEditar = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txbId = new System.Windows.Forms.TextBox();
-            this.Id = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
@@ -184,6 +186,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
@@ -314,6 +317,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txbId);
             this.groupBox1.Controls.Add(this.Id);
             this.groupBox1.Controls.Add(this.txbCpf);
@@ -327,6 +331,24 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pessoa";
+            // 
+            // txbId
+            // 
+            this.txbId.Enabled = false;
+            this.txbId.Location = new System.Drawing.Point(49, 31);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(45, 22);
+            this.txbId.TabIndex = 6;
+            // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.Location = new System.Drawing.Point(6, 36);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(24, 13);
+            this.Id.TabIndex = 5;
+            this.Id.Text = "ID:";
             // 
             // txbCpf
             // 
@@ -368,6 +390,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(350, 9);
             this.label14.Name = "label14";
@@ -378,10 +401,10 @@
             // gridEditar
             // 
             this.gridEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEditar.Location = new System.Drawing.Point(91, 397);
+            this.gridEditar.Location = new System.Drawing.Point(140, 397);
             this.gridEditar.Name = "gridEditar";
             this.gridEditar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridEditar.Size = new System.Drawing.Size(545, 203);
+            this.gridEditar.Size = new System.Drawing.Size(444, 203);
             this.gridEditar.TabIndex = 27;
             this.gridEditar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEditar_CellClick);
             // 
@@ -395,30 +418,13 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txbId
-            // 
-            this.txbId.Enabled = false;
-            this.txbId.Location = new System.Drawing.Point(49, 31);
-            this.txbId.Name = "txbId";
-            this.txbId.Size = new System.Drawing.Size(45, 22);
-            this.txbId.TabIndex = 6;
-            // 
-            // Id
-            // 
-            this.Id.AutoSize = true;
-            this.Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.Location = new System.Drawing.Point(6, 36);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(24, 13);
-            this.Id.TabIndex = 5;
-            this.Id.Text = "ID:";
-            // 
             // Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 612);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(735, 612);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gridEditar);
             this.Controls.Add(this.label14);
