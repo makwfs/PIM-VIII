@@ -62,6 +62,7 @@
             this.grid.Location = new System.Drawing.Point(12, 74);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
+            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(514, 150);
             this.grid.TabIndex = 2;
             // 

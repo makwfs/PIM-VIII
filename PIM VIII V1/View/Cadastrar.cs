@@ -11,12 +11,14 @@ using System.Windows.Forms;
 using SistemaMysql;
 using SistemaMysql.Model;
 using SistemaMysql.Entidades;
+using System.Data.SqlClient;
 
 namespace SistemaMysql
 {
     public partial class FormPrincipal : Form
     {
         PessoaModel model = new PessoaModel();
+        
 
         public FormPrincipal()
         {
@@ -60,7 +62,17 @@ namespace SistemaMysql
             }
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+       
     }
 
 

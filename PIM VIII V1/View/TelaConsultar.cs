@@ -31,6 +31,7 @@ namespace SistemaMysql.View
             try
             {
                 grid.DataSource = model.Listar(); // alimentar o grid 
+                
             }
             catch (Exception ex)
             {

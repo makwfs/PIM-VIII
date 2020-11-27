@@ -26,3 +26,5 @@ C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaM
 C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
 C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.exe
 C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.pdb
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\Telemática-PC\Documents\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.Editar.resources

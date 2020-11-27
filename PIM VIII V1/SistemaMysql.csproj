@@ -55,23 +55,35 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="Entidades\Pessoas.cs" />
-    <Compile Include="View\FormPrincipal.cs">
+    <Compile Include="View\Cadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPrincipal.Designer.cs">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <Compile Include="View\Cadastrar.Designer.cs">
+      <DependentUpon>Cadastrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\PessoaModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Editar.Designer.cs">
+      <DependentUpon>Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelaConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TelaConsultar.Designer.cs">
       <DependentUpon>TelaConsultar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FormPrincipal.resx">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="View\Cadastrar.resx">
+      <DependentUpon>Cadastrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +93,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Editar.resx">
+      <DependentUpon>Editar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TelaConsultar.resx">
       <DependentUpon>TelaConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -99,6 +118,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
