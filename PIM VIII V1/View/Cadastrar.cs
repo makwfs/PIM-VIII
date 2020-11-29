@@ -70,7 +70,18 @@ namespace SistemaMysql
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            
+            txbNome.Text = "";
+            txbCpf.Text = "";
+            txbLogradouro.Text = "";
+            txbNumeroEndereco.Text = "";
+            txbBairro.Text = "";
+            txbCidade.Text = "";
+            txbUf.Text = "";
+            txbCep.Text = "";
+            txbNome.Text = "";
+            txbDDD.Text = "";
+            txbNumeroTel.Text = "";
+            cbTipo.Text = "";
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)

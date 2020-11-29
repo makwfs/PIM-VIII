@@ -50,6 +50,7 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@Nome", dados.Nome);
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
+                sql.ExecuteNonQuery();
 
                 sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, uf, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @Uf, @Cep)", con.con);
                 sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);

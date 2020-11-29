@@ -83,5 +83,21 @@ namespace SistemaMysql.View
                 MessageBox.Show("Erro ao Salvar " + ex.Message);
             }
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txbNome.Text = "";
+            txbCpf.Text = "";
+            txbEndereco.Text = "";
+            txbNumeroEndereco.Text = "";
+            txbBairro.Text = "";
+            txbCidade.Text = "";
+            txbUf.Text = "";
+            txbCep.Text = "";
+            txbNome.Text = "";
+            txbDDD.Text = "";
+            txbNumeroTel.Text = "";
+            cbTipo.Text = "";
+        }
     }
 }
