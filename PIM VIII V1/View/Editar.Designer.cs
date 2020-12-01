@@ -428,6 +428,7 @@
             this.btnEcluir.TabIndex = 29;
             this.btnEcluir.Text = "Excluir";
             this.btnEcluir.UseVisualStyleBackColor = true;
+            this.btnEcluir.Click += new System.EventHandler(this.btnEcluir_Click);
             // 
             // Editar
             // 

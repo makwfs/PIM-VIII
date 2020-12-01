@@ -32,7 +32,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPesquisar = new System.Windows.Forms.TextBox();
             this.btnFecharConsulta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
@@ -68,12 +68,13 @@
             this.grid.Size = new System.Drawing.Size(514, 150);
             this.grid.TabIndex = 2;
             // 
-            // textBox1
+            // txbPesquisar
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 3;
+            this.txbPesquisar.Location = new System.Drawing.Point(48, 26);
+            this.txbPesquisar.Name = "txbPesquisar";
+            this.txbPesquisar.Size = new System.Drawing.Size(204, 20);
+            this.txbPesquisar.TabIndex = 3;
+            this.txbPesquisar.TextChanged += new System.EventHandler(this.txbPesquisar_TextChanged);
             // 
             // btnFecharConsulta
             // 
@@ -93,7 +94,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(549, 271);
             this.Controls.Add(this.btnFecharConsulta);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbPesquisar);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPesquisar);
@@ -112,7 +113,7 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView grid;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbPesquisar;
         private System.Windows.Forms.Button btnFecharConsulta;
     }
 }

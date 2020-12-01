@@ -61,5 +61,33 @@ namespace SistemaMysql.Model
                 MessageBox.Show("Erro ao Editar" + ex);
             }
         }
+
+        public void Excluir(Pessoas dados)
+        {
+            try
+            {
+                dao.Excluir(dados);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Excluir!" + ex);
+            }
+        }
+
+        public object Pesquisar(Pessoas dados)
+        {
+            try                                       
+            {
+                DataTable dt = new DataTable();
+                dt = dao.Pesquisar(dados);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

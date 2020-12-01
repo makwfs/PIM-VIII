@@ -61,8 +61,14 @@ namespace SistemaMysql.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if(txbId.Text == "")
+            {
+                MessageBox.Show("Selecione um registro na tabela para prosseguir com a edição!");
+                return;
+            }
             Pessoas dado = new Pessoas();
             EditarDados(dado);
+            Listar();
         }
 
         public void EditarDados(Pessoas dados)
@@ -98,6 +104,35 @@ namespace SistemaMysql.View
             txbDDD.Text = "";
             txbNumeroTel.Text = "";
             cbTipo.Text = "";
+        }
+
+        private void btnEcluir_Click(object sender, EventArgs e)
+        {
+            if (txbId.Text == "")
+            {
+                MessageBox.Show("Selecione um registro na tabela para Ecluir!");
+                return;
+            }
+            Pessoas dado = new Pessoas();
+            Excluir(dado);
+            Listar();
+        }
+
+        public void Excluir(Pessoas dados) 
+        {
+            try
+            {
+                dados.Id = Convert.ToInt32(txbId.Text);
+                
+
+                model.Excluir(dados);
+                MessageBox.Show("Excluido com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Excluir " + ex.Message);
+            }
         }
     }
 }

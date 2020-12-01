@@ -70,6 +70,26 @@ namespace SistemaMysql.DAO
             }
         }
 
+        public DataTable Pesquisar(Pessoas dados)
+        {
+            try                                                                                                               // Usar o try para caso ocorra algum erro
+            {
+                con.Conectar();
+                sql = new MySqlCommand("select * from pessoa where cpf = @Cpf", con.con);                                                    // comando para buscar dados no BD
+                sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = sql;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public void EditarDados(Pessoas dados)
         {
             try
@@ -92,6 +112,26 @@ namespace SistemaMysql.DAO
             }
         }
        
+        public void Excluir(Pessoas dados)
+        {
+            try
+            {
+                con.Conectar();
+                sql = new MySqlCommand("DELETE FROM pessoa WHERE id = @id", con.con);
+                sql.Parameters.AddWithValue("@Id", dados.Id);
+                sql.ExecuteNonQuery();
+                con.FecharConexao();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro ao Excluir" + ex);
+                con.FecharConexao();
+            }
+        }
+
+
 
     } 
 }

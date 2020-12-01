@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SistemaMysql.Model;
 using System.Data.SqlClient;
 using System.Windows.Controls;
+using SistemaMysql.Entidades;
 
 namespace SistemaMysql.View
 {
@@ -43,6 +44,28 @@ namespace SistemaMysql.View
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txbPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            Pessoas dado = new Pessoas();
+            Pesquisar(dado);
+            
+        }
+
+        public void Pesquisar(Pessoas dado)
+        {
+            try
+            {
+                dado.Cpf = txbPesquisar.Text;
+                grid.DataSource = model.Pesquisar(dado); 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro com os dados" + ex.Message);
+
+            }
         }
     }
 }
