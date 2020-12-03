@@ -57,6 +57,10 @@ namespace SistemaMysql.View
             txbCpf.Text = gridEditar.CurrentRow.Cells[2].Value.ToString();
             txbEndereco.Text = gridEditar.CurrentRow.Cells[3].Value.ToString();
             
+            
+            
+            
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -79,6 +83,14 @@ namespace SistemaMysql.View
                 dados.Nome = txbNome.Text;
                 dados.Cpf = txbCpf.Text;
                 dados.Endereco = txbEndereco.Text;
+                dados.Logradouro = txbEndereco.Text;
+                dados.Numero = Convert.ToInt32(txbNumeroEndereco);
+                dados.Cep = Convert.ToInt32(txbCep);
+                dados.Bairro = txbBairro.Text;
+                dados.Cidade = txbCidade.Text;
+                dados.Uf = txbUf.Text;
+
+
 
                 model.EditarDados(dados);
                 MessageBox.Show("Salvo com Sucesso!");

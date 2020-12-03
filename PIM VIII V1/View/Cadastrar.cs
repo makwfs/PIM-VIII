@@ -52,11 +52,11 @@ namespace SistemaMysql
                 dados.Cpf = txbCpf.Text;
                 dados.Endereco = txbLogradouro.Text;
                 dados.Logradouro = txbLogradouro.Text;
-                dados.Numero = txbNumeroEndereco.Text;
+                dados.Numero = Convert.ToInt32(txbNumeroEndereco.Text);
                 dados.Bairro = txbBairro.Text;
                 dados.Cidade = txbCidade.Text;
                 dados.Uf = txbUf.Text;
-                dados.Cep = txbCep.Text;
+                dados.Cep = Convert.ToInt32(txbCep.Text);
 
                 model.Cadastrar(dados);
                 MessageBox.Show("Salvo com Sucesso!");

@@ -28,6 +28,7 @@ namespace SistemaMysql.DAO
             {
                 con.Conectar();
                 sql = new MySqlCommand("select * from pessoa", con.con);                                                    // comando para buscar dados no BD
+                
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();
@@ -52,12 +53,12 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
                 sql.ExecuteNonQuery();
 
-                sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, uf, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @Uf, @Cep)", con.con);
+                sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, estado, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @estado, @Cep)", con.con);
                 sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);
                 sql.Parameters.AddWithValue("@Numero", dados.Numero);
                 sql.Parameters.AddWithValue("@Bairro", dados.Bairro);
                 sql.Parameters.AddWithValue("@Cidade", dados.Cidade);
-                sql.Parameters.AddWithValue("@Uf", dados.Uf);
+                sql.Parameters.AddWithValue("@estado", dados.Uf);
                 sql.Parameters.AddWithValue("@Cep", dados.Cep);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();
@@ -100,8 +101,17 @@ namespace SistemaMysql.DAO
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
                 sql.Parameters.AddWithValue("@Id", dados.Id);
-
                 sql.ExecuteNonQuery();
+
+                sql = new MySqlCommand("UPDATE endereco SET logradouro = @Logradouro, numero = @Numero, cep = @Cep, bairro = @Bairro, cidade = @Cidade, estado = @Estado  WHERE id =@Id", con.con);
+                sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);
+                sql.Parameters.AddWithValue("@Numero", Convert.ToInt32(dados.Numero));
+                sql.Parameters.AddWithValue("@Cep", Convert.ToInt32(dados.Cep));
+                sql.Parameters.AddWithValue("@Bairro", dados.Bairro);
+                sql.Parameters.AddWithValue("@Cidade", dados.Cidade);
+                sql.Parameters.AddWithValue("@Estado", dados.Uf);
+                sql.ExecuteNonQuery();
+
                 con.FecharConexao();
             }
             catch (Exception ex)
