@@ -47,13 +47,13 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("INSERT INTO pessoa (nome, cpf, endereco) values (@Nome, @Cpf, @Endereco)", con.con);  // comando para inserir dados no BD
+                sql = new MySqlCommand("INSERT INTO pessoa (nome, cpf, endereco) values (@Nome, @Cpf, @Endereco)", con.con);  // inclusão de dados no BD pessoa
                 sql.Parameters.AddWithValue("@Nome", dados.Nome);
                 sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
                 sql.Parameters.AddWithValue("@Endereco", dados.Endereco);
                 sql.ExecuteNonQuery();
 
-                sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, estado, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @estado, @Cep)", con.con);
+                sql = new MySqlCommand("INSERT INTO endereco (logradouro, numero, bairro, cidade, estado, cep) values (@Logradouro, @Numero, @Bairro, @Cidade, @estado, @Cep)", con.con); // inclusão de dados no BD endereco
                 sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);
                 sql.Parameters.AddWithValue("@Numero", dados.Numero);
                 sql.Parameters.AddWithValue("@Bairro", dados.Bairro);
@@ -73,11 +73,11 @@ namespace SistemaMysql.DAO
 
         public DataTable Pesquisar(Pessoas dados)
         {
-            try                                                                                                               // Usar o try para caso ocorra algum erro
+            try                                                                                                                                // Usar o try para caso ocorra algum erro
             {
                 con.Conectar();
-                sql = new MySqlCommand("select * from pessoa where cpf = @Cpf", con.con);                                                    // comando para buscar dados no BD
-                sql.Parameters.AddWithValue("@Cpf", dados.Cpf);
+                sql = new MySqlCommand("select * from pessoa where  cpf LIKE @Cpf", con.con);                                  // comando para buscar dados no BD // Like -> Buscar aproximado
+                sql.Parameters.AddWithValue("@Cpf", dados.Cpf +"%");                                                          // % necessário para busca aproximada funcionar
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = sql;
                 DataTable dt = new DataTable();
@@ -127,7 +127,7 @@ namespace SistemaMysql.DAO
             try
             {
                 con.Conectar();
-                sql = new MySqlCommand("DELETE FROM pessoa WHERE id = @id", con.con);
+                sql = new MySqlCommand("DELETE FROM pessoa WHERE id = @id", con.con);  // Comando para exclusão de dados no BD
                 sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
                 con.FecharConexao();

@@ -39,12 +39,13 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(258, 25);
+            this.btnPesquisar.Location = new System.Drawing.Point(451, 23);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 0;
-            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.Text = "Editar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // label1
             // 

@@ -50,7 +50,12 @@ namespace SistemaMysql.View
         {
             Pessoas dado = new Pessoas();
             Pesquisar(dado);
-            
+            if (txbPesquisar.Text == "")                       // Listar caso o campo esteja vazio
+            {
+                Listar();
+                return;
+            }
+
         }
 
         public void Pesquisar(Pessoas dado)
@@ -66,6 +71,13 @@ namespace SistemaMysql.View
                 MessageBox.Show("Erro com os dados" + ex.Message);
 
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Editar form = new Editar();
+            form.Show();
+
         }
     }
 }

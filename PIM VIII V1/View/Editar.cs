@@ -125,6 +125,10 @@ namespace SistemaMysql.View
                 MessageBox.Show("Selecione um registro na tabela para Ecluir!");
                 return;
             }
+            if(MessageBox.Show("Deseja realmente Exluir?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.No)  // DialogResult.No -> Caso o botão escolhido seja o 2 ele entra no return e não faz nada
+            {
+                return;
+            }
             Pessoas dado = new Pessoas();
             Excluir(dado);
             Listar();
