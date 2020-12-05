@@ -8,8 +8,8 @@ namespace SistemaMysql.Entidades
 {
     public class Pessoas
     {
-        int id, numero,cep;
-        string nome, cpf, endereco, logradouro, bairro, cidade, uf;
+        int id;
+        string nome, cpf, endereco, logradouro, bairro, cidade, uf, numero, cep;
 
         // Encapsulamento 
         public int Id { get => id; set => id = value; }
@@ -17,10 +17,10 @@ namespace SistemaMysql.Entidades
         public string Cpf { get => cpf; set => cpf = value; }
         public string Endereco { get => endereco; set => endereco = value; }
         public string Logradouro { get => logradouro; set => logradouro = value; }
-        public int Numero { get => numero; set => numero = value; }
+        public string Numero { get => numero; set => numero = value; }
         public string Bairro { get => bairro; set => bairro = value; }
         public string Cidade { get => cidade; set => cidade = value; }
         public string Uf { get => uf; set => uf = value; }
-        public int Cep { get => cep; set => cep = value; }
+        public string Cep { get => cep; set => cep = value; }
     }
 }

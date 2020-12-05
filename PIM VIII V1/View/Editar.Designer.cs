@@ -272,6 +272,7 @@
             // txbNumeroEndereco
             // 
             this.txbNumeroEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNumeroEndereco.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txbNumeroEndereco.Location = new System.Drawing.Point(470, 37);
             this.txbNumeroEndereco.Name = "txbNumeroEndereco";
             this.txbNumeroEndereco.Size = new System.Drawing.Size(60, 22);

@@ -84,8 +84,8 @@ namespace SistemaMysql.View
                 dados.Cpf = txbCpf.Text;
                 dados.Endereco = txbEndereco.Text;
                 dados.Logradouro = txbEndereco.Text;
-                dados.Numero = Convert.ToInt32(txbNumeroEndereco);
-                dados.Cep = Convert.ToInt32(txbCep);
+                
+                
                 dados.Bairro = txbBairro.Text;
                 dados.Cidade = txbCidade.Text;
                 dados.Uf = txbUf.Text;
@@ -98,7 +98,7 @@ namespace SistemaMysql.View
             catch (Exception ex)
             {
 
-                MessageBox.Show("Erro ao Salvar " + ex.Message);
+                MessageBox.Show("Erro ao Salvar  EEEE" + ex.Message);
             }
         }
 

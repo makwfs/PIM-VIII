@@ -44,3 +44,19 @@ C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V
 C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
 C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.exe
 C:\Users\mak_w\OneDrive\Área de Trabalho\PIM-VIII-main\PIM-VIII-main\PIM VIII V1\obj\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe.config
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\SistemaMysql.pdb
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.dll
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\bin\Debug\MySql.Data.xml
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csprojAssemblyReference.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.FormPrincipal.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.Properties.Resources.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.Editar.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaConsultar.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.View.TelaInicial.resources
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.GenerateResource.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CoreCompileInputs.cache
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.csproj.CopyComplete
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.exe
+C:\Users\mak_w\OneDrive\Documentos\MeusProjetos\GitHub\PIM-VIII\PIM VIII V1\obj\Debug\SistemaMysql.pdb

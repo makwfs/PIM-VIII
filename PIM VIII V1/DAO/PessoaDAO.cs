@@ -105,11 +105,12 @@ namespace SistemaMysql.DAO
 
                 sql = new MySqlCommand("UPDATE endereco SET logradouro = @Logradouro, numero = @Numero, cep = @Cep, bairro = @Bairro, cidade = @Cidade, estado = @Estado  WHERE id =@Id", con.con);
                 sql.Parameters.AddWithValue("@Logradouro", dados.Logradouro);
-                sql.Parameters.AddWithValue("@Numero", Convert.ToInt32(dados.Numero));
-                sql.Parameters.AddWithValue("@Cep", Convert.ToInt32(dados.Cep));
+                sql.Parameters.AddWithValue("@Numero", dados.Numero);
+                sql.Parameters.AddWithValue("@Cep", dados.Cep);
                 sql.Parameters.AddWithValue("@Bairro", dados.Bairro);
                 sql.Parameters.AddWithValue("@Cidade", dados.Cidade);
                 sql.Parameters.AddWithValue("@Estado", dados.Uf);
+                sql.Parameters.AddWithValue("@Id", dados.Id);
                 sql.ExecuteNonQuery();
 
                 con.FecharConexao();
